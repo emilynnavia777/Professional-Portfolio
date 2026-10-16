@@ -81,13 +81,12 @@ git push -f origin main
 
 ## Step 5 — Publish with GitHub Pages
 
-A workflow is already included at `.github/workflows/deploy.yml`. It deploys automatically
-on every push to `main`. To activate it:
+The site is a single static file, so no build is needed:
 
 1. In your repo → **Settings** → **Pages**
-2. **Build and deployment → Source:** select **GitHub Actions**
-3. Wait ~1 minute after pushing, then check the **Actions** tab for a green ✔
-4. Your site is live at:
+2. **Build and deployment → Source:** select **Deploy from a branch**
+3. **Branch:** `main` / `/ (root)` → **Save**
+4. Wait ~1 minute; your site is live at:
 
 ```
 https://YOUR-USERNAME.github.io/physics-educator/
@@ -105,7 +104,6 @@ No Jekyll, bundler or `_config.yml` needed — it's a single static file.
 | `README.md` | Project documentation |
 | `.gitignore` | Excludes `uploads/`, `*.mp4`, `papers/*.pdf` |
 | `papers/README.md` | Explains the past-paper archive filenames |
-| `.github/workflows/deploy.yml` | Auto-deploys to GitHub Pages on push |
 
 **Excluded on purpose:** the `uploads/` folder (48 original JPEGs, ~23 MB). The page never
 references those files — every photo is embedded in `index.html` — so keeping them out makes
