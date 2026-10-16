@@ -1,0 +1,22 @@
+# Original source photographs — not referenced by the page.
+# Every photo is embedded directly into index.html as a base64 data URI,
+# so these originals are kept locally as backups only (saves ~23 MB in the repo).
+uploads/
+
+# Optional media the site looks for at runtime.
+# Add the real files here and remove the matching ignore line to publish them.
+*.mp4
+papers/*.pdf
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+
+# Local tooling
+node_modules/
+.venv/
+__pycache__/
+*.pyc
